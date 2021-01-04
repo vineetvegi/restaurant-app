@@ -1,8 +1,31 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Install Dependencies
 
-In the project directory, you can run:
+### `npm install`
+
+## Login to the Database
+
+Create a .env file similar to the .env.example.env or modify the current file
+Include your PostgreSQL username, password, database and port.
+
+## Map the Data
+
+Modify the App.js file when mapping the data so that it corresponds to the database collumn name
+
+{item.<yourCollumnName>}
+
+## Configure the PostgreSQL query
+
+The query in api.js must correspond to the database table name
+
+client.query("SELECT * FROM <yourTableName>", function(err, result) {})
+  
+## In order to run the backend, navigate to Server and run:
+
+### `nodemon server.js`
+
+## Start your Application
 
 ### `npm start`
 
